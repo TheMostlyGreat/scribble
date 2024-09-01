@@ -6,20 +6,26 @@
    a. Install Flutter SDK using a package manager:
       - For macOS:
         - Use Homebrew: `brew install --cask flutter`
-      - For Linux:
-        - Use Snap: `sudo snap install flutter --classic`
-      - For Windows:
-        - Use Chocolatey: `choco install flutter`
+ 
       
    b. Verify and configure Flutter:
       - Run `flutter doctor` to check for missing dependencies
       - Install missing dependencies:
         1. Android toolchain:
            ```bash
+           # Install Android Studio using Homebrew
            brew install --cask android-studio
+
            # Open Android Studio and follow the setup wizard to install Android SDK
+           # This step is manual and requires user interaction
+
+           # Set the ANDROID_HOME environment variable to point to the SDK location
            echo 'export ANDROID_HOME=$HOME/Library/Android/sdk' >> ~/.zshrc
+
+           # Add Android SDK tools and platform-tools to the system PATH
            echo 'export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools' >> ~/.zshrc
+
+           # Reload the shell configuration to apply changes
            source ~/.zshrc
            ```
 
@@ -27,12 +33,17 @@
            - Install Xcode from the App Store
            - After installation, run:
              ```bash
+             # Set Xcode command line tools path
              sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+
+             # Accept Xcode license and install additional components
              sudo xcodebuild -runFirstLaunch
              ```
 
         3. CocoaPods:
            ```bash
+           # Install CocoaPods using Ruby's gem package manager
+           # sudo is used to install it system-wide
            sudo gem install cocoapods
            ```
 
