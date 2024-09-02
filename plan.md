@@ -39,10 +39,6 @@
         - Install VS Code
         - Install the Flutter and Dart extensions
         - Configure Flutter SDK path in VS Code settings
-      - For Android Studio:
-        - Install Android Studio
-        - Install the Flutter and Dart plugins
-        - Configure Flutter SDK path in Android Studio settings
    
    d. Set up platform-specific development tools:
       - For mobile:
@@ -51,13 +47,37 @@
       - For web:
         - Ensure Chrome browser is installed for debugging
       - For desktop:
-        - On Windows, install Visual Studio with "Desktop development with C++" workload
         - On macOS, install Xcode command line tools
-        - On Linux, install required libraries (e.g., gtk3, ninja-build)
 
    e. Verify setup:
       - Run `flutter devices` to check available devices/platforms
-      - Create and run a sample Flutter app on each target platform
+      - Create and run a sample Flutter app on each target platform:
+        1. Create a new Flutter project:
+           ```bash
+           flutter create sample_app
+           cd sample_app
+           ```
+        
+        2. Run on Android:
+           - Start an Android emulator or connect an Android device
+           - Run: `flutter run -d android`
+
+        3. Run on iOS (macOS only):
+           - Start an iOS simulator or connect an iOS device
+           - Run: `flutter run -d ios`
+
+        4. Run on web:
+           - Enable web support: `flutter config --enable-web`
+           - Run: `flutter run -d chrome`
+
+        5. Run on desktop:
+           - For macOS: `flutter run -d macos`
+           - For Windows: `flutter run -d windows`
+           - For Linux: `flutter run -d linux`
+
+        6. Verify app functionality on each platform
+           - Check if the default counter app loads and works correctly
+           - Test hot reload functionality
 
 2. **Project Creation**
    - Create a new Flutter project with web support:
