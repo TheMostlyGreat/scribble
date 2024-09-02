@@ -31,38 +31,7 @@
 
         2. Xcode:
            - Install Xcode from the App Store
-           - After installation, run:
-             ```bash
-             # Set Xcode command line tools path
-             sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-
-             # Accept Xcode license and install additional components
-             sudo xcodebuild -runFirstLaunch
-             ```
-
-        3. CocoaPods:
-           ```bash
-           # Install CocoaPods using Ruby's gem package manager
-           # sudo is used to install it system-wide
-           sudo gem install cocoapods
-           ```
-
-      - Update Flutter configuration:
-        ```bash
-        flutter config --android-sdk $ANDROID_HOME
-        ```
-
-      - Run `flutter doctor` again to verify all issues are resolved
-      - Add Flutter to your system PATH:
-        - For macOS:
-          - If installed via Homebrew:
-            - Add to ~/.zshrc or ~/.bash_profile: `export PATH="$PATH:/opt/homebrew/bin/flutter/bin"`
-          - If manually installed:
-            - Add to ~/.zshrc or ~/.bash_profile: `export PATH="$PATH:$HOME/flutter/bin"`
-          - Reload shell: `source ~/.zshrc` or `source ~/.bash_profile`
-        - For Windows:
-          - Use setx command: `setx PATH "%PATH%;[PATH_TO_FLUTTER]\flutter\bin"`
-          - Restart command prompt to apply changes
+           - Go through the set up process
 
    c. Set up the integrated development environment (IDE):
       - Choose between VS Code or Android Studio
